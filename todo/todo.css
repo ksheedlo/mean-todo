@@ -1,0 +1,19 @@
+.left-column {
+  padding-left: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.due-date {
+  width: 309px;
+}
+
+.submit-button {
+  position: relative;
+  bottom: 5px;
+}
+
+.task-text {
+  width: 241px;
+}

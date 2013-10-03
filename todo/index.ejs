@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <title>mean-todo | Demo todo app</title>
+
+    <% vendorCss.forEach(function (css) { %>
+      <link rel="stylesheet" href="<%= css %>">
+    <% }) %>
+    <link rel="stylesheet" href="todo.css">
+
+    <% vendorJs.forEach(function (jsFile) { %>
+      <script type="text/javascript" src="<%= jsFile %>"></script>
+    <% }) %>
+    <script type="text/javascript" src="todo.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="span12 left-column">
+        <h1>What do you want to do?</h1>
+        <div ng-controller="TodoCtrl">
+          <table class="table">
+            <tr>
+              <th>Task</th>
+              <th>Due Date</th>
+            </tr>
+            <tr ng-repeat="todo in todos | orderBy:'due'">
+              <td ng-bind="todo.text"></td>
+              <td ng-bind="todo.due | date:'mediumDate'"></td>
+            </tr>
+          </table>
+          <form name="addTask">
+            <input ng-model="taskText" type="text" name="taskTextInput" 
+            placeholder="Type a new todo" class="task-text" required>
+            <a class="btn btn-primary submit-button" ng-click="submit()" 
+            ng-class="addTask.taskTextInput.$error.required ? 'disabled' : ''">
+              Submit
+            </a>
+            <div class="well well-small due-date" ng-model="taskDue">
+              <datepicker show-weeks="false"></datepicker>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>  

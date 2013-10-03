@@ -1,0 +1,19 @@
+{
+  "name": "mean-todo",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksheedlo/mean-todo.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "bower": "~1.2.6",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-ejs": "~0.1.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "express": "~3.4.0",
+    "mongoose": "~3.6.20"
+  }
+}
